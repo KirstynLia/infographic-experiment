@@ -29,11 +29,12 @@
             border-radius: 20px;
             padding: 40px;
             max-width: 900px;
-            width: 100%; /* Ensure it takes full width up to max-width */
+            width: 92%; /* Ensure it takes full width up to max-width */
             /*box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);*/
             position: relative;
             overflow: hidden;
             gap: 30px; /* Space between illustration and text */
+               margin: auto;
         }
 
        .illustration-section {
