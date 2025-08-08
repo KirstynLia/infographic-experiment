@@ -1,0 +1,234 @@
+        :root {
+            --vinted-light-purple: ##CCCDFE; /* Lavender for container background */
+            --vinted-dark-teal: ##004654; /* Text color */
+            --vinted-green-shirt: #81c784; /* Shirt color */
+            --vinted-dark-green-border: #558b2f; /* Shirt border color */
+            --vinted-rack-color: #333; /* Clothing rack color */
+            --vinted-teal-accent: #008080; /* Accent color for icon and dots */
+            --vinted-body-bg: #F0F0F8; /* Very light purple for body background */
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            /*background-color: var(--vinted-light-purple);*/
+            font-family: 'Inter', sans-serif;
+            color: var(--vinted-dark-teal);
+            padding: 20px; /* Add some padding around the container */
+            box-sizing: border-box; /* Include padding in element's total width and height */
+        }
+
+       .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: var(--vinted-light-purple);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 900px;
+            width: 100%; /* Ensure it takes full width up to max-width */
+            /*box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);*/
+            position: relative;
+            overflow: hidden;
+            gap: 30px; /* Space between illustration and text */
+        }
+
+       .illustration-section {
+            flex-shrink: 0; /* Prevent shrinking on larger screens */
+            width: 300px; /* Fixed width for illustration area */
+            height: 200px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end; /* Align rack to bottom */
+        }
+
+       /*.clothing-rack-wrapper {
+            position: relative;
+            width: 180px;
+            height: 150px;
+            transform: scale(0.9); /* Adjust size 
+        }
+
+       .rack-leg {
+            position: absolute;
+            bottom: 0;
+            width: 3px;
+            height: 100%;
+            background-color: var(--vinted-rack-color);
+            border-radius: 2px;
+        }
+
+       .rack-leg.left {
+            left: 15%;
+            transform: rotate(5deg);
+            transform-origin: bottom left;
+        }
+
+       .rack-leg.right {
+            right: 15%;
+            transform: rotate(-5deg);
+            transform-origin: bottom right;
+        }
+
+       .rack-bar {
+            position: absolute;
+            top: 15px;
+            left: 10%;
+            width: 80%;
+            height: 3px;
+            background-color: var(--vinted-rack-color);
+            border-radius: 2px;
+            transform: rotate(-2deg);
+        }
+
+       .shirt {
+            position: absolute;
+            background-color: var(--vinted-green-shirt);
+            border: 1px solid var(--vinted-dark-green-border);
+            border-radius: 5px;
+            width: 60px;
+            height: 70px;
+            clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%); /* Simple shirt shape */
+            top: 20px; /* Position relative to rack bar 
+        }
+
+       .shirt-left {
+            left: 20%;
+            transform: rotate(-8deg);
+        }
+
+       .shirt-right {
+            left: 55%;
+            transform: rotate(5deg);
+        }
+
+       .pause-icon {
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            right: -20px; /* Overlap with the right edge of illustration section */
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: var(--vinted-light-purple); /* Match container background for blending */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow 
+        }
+
+       .pause-icon svg {
+            width: 60%;
+            height: 60%;
+            overflow: visible; /* Ensure stroke is visible 
+        }
+
+       .pause-icon svg circle {
+            stroke: var(--vinted-teal-accent);
+            stroke-width: 4;
+        }
+
+       .pause-icon svg rect {
+            fill: var(--vinted-teal-accent);
+        } */
+
+       .text-section {
+            flex: 1; /* Allow text to take remaining space */
+            font-size: 1.4em;
+            line-height: 1.4;
+            text-align: left;
+        }
+
+       .text-section strong {
+            font-weight: bold;
+        }
+
+       .pagination-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+
+       .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 2px solid var(--vinted-teal-accent);
+            background-color: transparent;
+        }
+
+       .dot.active {
+            background-color: var(--vinted-teal-accent);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+           .container {
+                flex-direction: column;
+                padding: 30px;
+                text-align: center;
+                gap: 20px;
+            }
+
+           .illustration-section {
+                width: 100%; /* Take full width */
+                height: 150px; /* Adjusted height for smaller screens */
+                align-items: center; /* Center rack vertically */
+            }
+
+           .clothing-rack-wrapper {
+                position: relative; /* Keep relative for internal elements */
+                left: auto;
+                transform: none;
+                margin: 0 auto; /* Center horizontally */
+            }
+
+           .pause-icon {
+                position: relative; /* Change to relative for better stacking on small screens */
+                transform: none;
+                margin-top: 20px;
+                left: auto;
+                right: auto;
+                top: auto;
+            }
+
+           .text-section {
+                font-size: 1.2em;
+                text-align: center;
+            }
+
+           .pagination-dots {
+                position: relative; /* Change to relative for better stacking */
+                bottom: auto;
+                left: auto;
+                transform: none;
+                margin-top: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+           .container {
+                padding: 20px;
+            }
+
+           .text-section {
+                font-size: 1em;
+            }
+
+           .clothing-rack-wrapper {
+                width: 150px;
+                height: 120px;
+            }
+
+           .pause-icon {
+                width: 70px;
+                height: 70px;
+            }
+        }
