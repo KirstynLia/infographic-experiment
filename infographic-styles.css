@@ -8,6 +8,13 @@
             --vinted-body-bg: #F0F0F8; /* Very light purple for body background */
         }
 
+        @font-face {
+          font-family: vinted-inter;
+          src: URL("v-inter-regular-375.woff");
+          font-weight: bold;
+        }
+
+
         body {
             margin: 0;
             display: flex;
@@ -15,11 +22,12 @@
             align-items: center;
             min-height: 100vh;
             /*background-color: var(--vinted-light-purple);*/
-            font-family: 'Inter', sans-serif;
+            font-family: 'vinted-inter', Inter, sans-serif;
             color: var(--vinted-dark-teal);
             padding: 20px; /* Add some padding around the container */
             box-sizing: border-box; /* Include padding in element's total width and height */
         }
+
 
        .container {
             display: flex;
@@ -93,7 +101,7 @@
             border-radius: 5px;
             width: 60px;
             height: 70px;
-            clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%); /* Simple shirt shape */
+            clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%); /* Simple shirt shape
             top: 20px; /* Position relative to rack bar 
         }
 
@@ -111,10 +119,10 @@
             position: absolute;
             width: 90px;
             height: 90px;
-            right: -20px; /* Overlap with the right edge of illustration section */
+            right: -20px; /* Overlap with the right edge of illustration section 
             top: 50%;
             transform: translateY(-50%);
-            background-color: var(--vinted-light-purple); /* Match container background for blending */
+            background-color: var(--vinted-light-purple); /* Match container background for blending
             border-radius: 50%;
             display: flex;
             justify-content: center;
