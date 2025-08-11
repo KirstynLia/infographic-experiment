@@ -3,16 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Container</title>
+    <title>Infographic test</title>
     <style>
        :root {
-            --vinted-light-purple: #CCCDFE; /* Lavender for container background */
-            --vinted-dark-teal: #004654; /* Text color */
-            --vinted-green-shirt: #81c784; /* Shirt color */
-            --vinted-dark-green-border: #558b2f; /* Shirt border color */
-            --vinted-rack-color: #333; /* Clothing rack color */
-            --vinted-teal-accent: #008080; /* Accent color for icon and dots */
-            --vinted-body-bg: #F0F0F8; /* Very light purple for body background */
+            --vinted-lavender-soft: #CCCDFE; /* container background */
+            --vinted-calypso: #004654; /* Text color */
         }
 
         @font-face {
@@ -27,7 +22,7 @@
             align-items: center;
             min-height: 100vh;
             font-family: 'vinted-inter', Inter, sans-serif;
-            color: var(--vinted-dark-teal);
+            color: var(--vinted-calypso);
             padding: 20px; /* Add some padding around the container */
             box-sizing: border-box; /* Include padding in element's total width and height */
         }
@@ -36,11 +31,11 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            background-color: var(--vinted-light-purple);
+            background-color: var(--vinted-lavender-soft);
             border-radius: 20px;
             padding: 40px;
             max-width: 900px;
-            width: 92%; /* Ensure it takes full width up to max-width */
+            width: 100%; /* Ensure it takes full width up to max-width */
             position: relative;
             overflow: hidden;
             gap: 30px; /* Space between illustration and text */
@@ -49,7 +44,7 @@
 
        .illustration-section {
             flex-shrink: 0; /* Prevent shrinking on larger screens */
-            width: 300px; /* Fixed width for illustration area */
+            width: 50%; /* Fixed width for illustration area */
             height: 200px;
             position: relative;
             display: flex;
@@ -59,7 +54,7 @@
 
           .text-section {
             flex: 1; /* Allow text to take remaining space */
-            font-size: 1.4em;
+            font-size: 1em;
             line-height: 1.4;
             text-align: left;
         }
@@ -85,7 +80,7 @@
 
 
            .text-section {
-                font-size: 1.2em;
+                font-size: 1em;
                 text-align: center;
             }
 
@@ -97,7 +92,7 @@
             }
 
            .text-section {
-                font-size: 1em;
+                font-size: .75em;
             }
 
         }
