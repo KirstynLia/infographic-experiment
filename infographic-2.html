@@ -18,7 +18,6 @@
         @font-face {
           font-family: vinted-inter;
           src: URL("https://raw.githubusercontent.com/KirstynLia/infographic-experiment/tree/main/vinted-inter-font");
-          font-weight: bold;
         }
 
         body {
@@ -68,27 +67,6 @@
        .text-section strong {
             font-weight: bold;
         }
-    
-       .pagination-dots {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 10px;
-        }
-
-       .dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            border: 2px solid var(--vinted-teal-accent);
-            background-color: transparent;
-        }
-
-       .dot.active {
-            background-color: var(--vinted-teal-accent);
-        }
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
@@ -105,34 +83,12 @@
                 align-items: center; /* Center rack vertically */
             }
 
-           .clothing-rack-wrapper {
-                position: relative; /* Keep relative for internal elements */
-                left: auto;
-                transform: none;
-                margin: 0 auto; /* Center horizontally */
-            }
-
-           .pause-icon {
-                position: relative; /* Change to relative for better stacking on small screens */
-                transform: none;
-                margin-top: 20px;
-                left: auto;
-                right: auto;
-                top: auto;
-            }
 
            .text-section {
                 font-size: 1.2em;
                 text-align: center;
             }
 
-           .pagination-dots {
-                position: relative; /* Change to relative for better stacking */
-                bottom: auto;
-                left: auto;
-                transform: none;
-                margin-top: 30px;
-            }
         }
 
         @media (max-width: 480px) {
@@ -144,15 +100,6 @@
                 font-size: 1em;
             }
 
-           .clothing-rack-wrapper {
-                width: 150px;
-                height: 120px;
-            }
-
-           .pause-icon {
-                width: 70px;
-                height: 70px;
-            }
         }
     </style>
 </head>
@@ -162,7 +109,7 @@
              <img viewBox="0 0 100 100" src="https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/clothes-rack-pause.svg" alt="illustration of clothing rack with pause icon">
         </div>
         <div class="text-section">
-            <p>We've temporarily suspended your order because of an issue with the item or delivery.</br></br>Press<b> View issue details </b>on the Order screen for next steps. We’ll hold your payment securely until the issue is resolved.</p>
+            <p>We've temporarily suspended your order because of an issue with the item or delivery.</br></br>Press<strong> View issue details </strong>on the Order screen for next steps. We’ll hold your payment securely until the issue is resolved.</p>
         </div>
     </div>
 </body>
