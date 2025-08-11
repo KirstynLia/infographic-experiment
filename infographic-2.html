@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Infographic test</title>
    <style>
-          :root {
+        :root {
             --vinted-calypso: #004654; /* Text color */
             --vinted-calypso-light: #007782;
             --vinted-mint: #eDffe9;
@@ -16,29 +16,15 @@
             --vinted-lemon: #ffe13b; 
             --vinted-lemon-soft: #ffeebd; 
         }
-
-        @font-face {
-          font-family: vinted-inter;
-          src: URL("https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/vinted-inter-font/V-Inter-Regular-375.woff");
-        }
-        @font-face {
-          font-family: vinted-inter;
-          src: URL("https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/vinted-inter-font/V-Inter-Bold.otf");
-          font-weight: bold;
-        }
-         @font-face {
-          font-family: vinted-honey;
-          src: URL("https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/vinted-inter-font/VCHoney-SemiBoldDeck.otf");
-        }
-
-
+        
+        /* Using a standard font to avoid external file issues */
         body {
             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            font-family: 'vinted-inter', Inter, sans-serif;
+            font-family: 'Inter', sans-serif;
             color: var(--vinted-calypso);
             padding: 20px; /* Add some padding around the container */
             box-sizing: border-box; /* Include padding in element's total width and height */
@@ -66,10 +52,18 @@
             position: relative;
             display: flex;
             justify-content: center;
-            align-items: flex-end; /* Align rack to bottom */
+            align-items: center;
         }
 
-          .text-section {
+       .illustration-section img {
+           max-width: 100%;
+           max-height: 100%; /* Ensure the image doesn't exceed the container height */
+           height: auto;
+           display: block;
+           object-fit: contain; /* Maintain aspect ratio */
+       }
+
+       .text-section {
             flex: 1; /* Allow text to take remaining space */
             font-size: 1em;
             line-height: 1.4;
@@ -81,17 +75,16 @@
         }
 
        .text-section h1 {
-           font-family: 'vinted-honey', Inter, sans-serif;
-           font-size: 1.4em;
-           padding: (10px,0);
+            font-family: 'vinted-honey', Inter, sans-serif;
+            font-size: 1.4em;
+            padding: 10px 0; /* Corrected padding syntax */
         }
 
-       a:link{
-           text-decoration: underline;
-           color: var(--vinted-calypso);
-           
-       }
-    
+       a:link {
+            text-decoration: underline;
+            color: var(--vinted-calypso);
+        }
+   
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
@@ -108,18 +101,17 @@
                 height: 200px; /* Adjusted height for smaller screens */
                 align-items: center; /* Center rack vertically */
             }
- 
+
            .text-section {
                 font-size: .75em;
-                text-align: left;
-               
+                text-align: center;
             }
             
-          .text-section h1 {
-           font-family: 'vinted-honey', Inter, sans-serif;
-           font-size: 1.2em;
-           padding: (10px,0);
-        }
+           .text-section h1 {
+                font-family: 'vinted-honey', Inter, sans-serif;
+                font-size: 1.2em;
+                padding: 10px 0;
+            }
 
         }
 
@@ -128,36 +120,35 @@
            .container {
                 padding: 15px;
             }
-                       
-         .illustration-section {
+                        
+           .illustration-section {
                 width: 100%; /* Take full width */
                 height: 200px; /* Adjusted height for smaller screens */
                 align-items: center; /* Center rack vertically */
             }
 
            .text-section {
-               font-size: .75em;
-               text-align: left;
+                font-size: .75em;
+                text-align: center; /* Corrected text alignment for mobile */
             }
             
            .text-section h1 {
-           font-family: 'vinted-honey', Inter, sans-serif;
-           font-size: 1.2em;
-           padding: (10px,0);
+                font-family: 'vinted-honey', Inter, sans-serif;
+                font-size: 1.2em;
+                padding: 10px 0;
             }
         }
-        </style>
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="illustration-section">
-             <img viewBox="0 0 100 100" src="https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/scenarios-parcels.png" alt="shipping illustration">
+            <img src="https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/scenarios-parcels.png" alt="shipping illustration">
         </div>
         <div class="text-section">
             <!-- <h1>Your order is temporarily suspended</h1> -->
-            <p><strong>Your order has been temporarily suspended</strong></p>
-            <p>This typically happens when there’s an issue during delivery&mdash;like if the item doesn’t arrive, arrives damaged, or is reported as “significantly not as described” (SNAD).</p>
-            <p>Press<strong> View issue details </strong>on the Order screen for next steps. We’ll hold your payment securely until the issue is resolved.</p>
+            <p>Your order is temporarily suspended.</p><p>This typically happens when there’s an issue during delivery&mdash;like if the item doesn’t arrive, arrives damaged, or is reported as “significantly not as described” (SNAD).</p>
+            <p>Press<strong> View issue details </strong>on the <a href="#">Order screen</a> for next steps. We’ll hold your payment securely until the issue is resolved.</p>
         </div>
     </div>
 </body>
