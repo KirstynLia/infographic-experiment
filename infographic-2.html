@@ -91,7 +91,7 @@
             /* For tablets */
            .container {
                 flex-direction: column;
-                padding: 20px;
+                padding: 30px;
                 text-align: center;
                 gap: 20px;
             }
@@ -103,7 +103,7 @@
             }
 
            .text-section {
-                font-size: .75em;
+                font-size: 1em;
                 text-align: center;
             }
             
@@ -118,7 +118,7 @@
         @media (max-width: 480px) {
             /* For mobile */
            .container {
-                padding: 15px;
+                padding: 20px;
             }
                         
            .illustration-section {
@@ -128,7 +128,7 @@
             }
 
            .text-section {
-                font-size: .75em;
+                font-size: .1em;
                 text-align: center; /* Corrected text alignment for mobile */
             }
             
@@ -144,11 +144,14 @@
     <div class="container">
         <div class="illustration-section">
             <img src="https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/scenarios-parcels.png" alt="shipping illustration">
+           <!-- <img src="https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/screenshot.svg" alt="shipping illustration"> -->
         </div>
         <div class="text-section">
             <!-- <h1>Your order is temporarily suspended</h1> -->
-            <p>Your order is temporarily suspended.</p><p>This typically happens when there’s an issue during delivery&mdash;like if the item doesn’t arrive, arrives damaged, or is reported as “significantly not as described” (SNAD).</p>
-            <p>Press<strong> View issue details </strong>on the <a href="#">Order screen</a> for next steps. We’ll hold your payment securely until the issue is resolved.</p>
+            <p><strong>Your order is temporarily suspended.</strong> This typically happens when there’s an issue during delivery&mdash;like if the item doesn’t arrive, arrives damaged, or is reported as “significantly not as described” (SNAD).</p>
+            <p>Press<strong> View issue details </strong>on the Order screen for next steps. We’ll hold your payment securely until the issue is resolved.</p>
+
+            <!-- <p>Your order is temporarily suspended&mdash;Press<strong> View issue details </strong>on the Order screen for next steps. We’ll hold your payment securely until the issue is resolved.</p> -->
         </div>
     </div>
 </body>
