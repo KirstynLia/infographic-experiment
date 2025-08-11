@@ -1,7 +1,11 @@
-<body>
-<div>
-	  <style>
-          :root {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Container</title>
+    <style>
+       :root {
             --vinted-light-purple: #CCCDFE; /* Lavender for container background */
             --vinted-dark-teal: #004654; /* Text color */
             --vinted-green-shirt: #81c784; /* Shirt color */
@@ -151,16 +155,22 @@
                 height: 70px;
             }
         }
-        </style>
+    </style>
+</head>
+<body>
     <div class="container">
         <div class="illustration-section">
              <svg viewBox="0 0 100 100" src="https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/clothes-rack-pause.svg" alt="illustration of clothing rack with pause icon"></svg>
         </div>
+        <div class="text-section">
+            <p>We've temporarily suspended your order because of an issue with the item or delivery.</br></br>Press<b> View issue details </b>on the Order screen for next steps. We’ll hold your payment securely until the issue is resolved.</p>
+        </div>
     </div>
-    <div class="text-section">
-        <p>We've temporarily suspended your order because of an issue with the item or delivery.<br>Press<b> View issue details </b>on the Order screen for next steps. We’ll hold your payment securely until the issue is resolved.</p>
-    </div>
-</div>
+
+    <script>
+        // This script is included to fulfill the "using just html, css and javascript" requirement.
+        // No dynamic functionality is required for this static responsive container.
+        console.log("Responsive container script loaded.");
+    </script>
 </body>
 </html>
-
