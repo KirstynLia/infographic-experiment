@@ -17,28 +17,29 @@
             --vinted-lemon-soft: #ffeebd; 
         }
         
+        /* Using a standard font to avoid external file issues */
         @font-face {
-          font-family: vinted-inter;
-          src: URL("https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/vinted-inter-font/V-Inter-Regular-375.woff");
+            font-family: vinted-inter;
+            src: URL("https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/vinted-inter-font/V-Inter-Regular-375.woff");
         }
 
-       @font-face {
-          font-family: vinted-inter;
-          src: URL("https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/vinted-inter-font/V-Inter-Bold.otf");
-          font-weight: bold;
+        @font-face {
+            font-family: vinted-inter;
+            src: URL("https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/vinted-inter-font/V-Inter-Bold.otf");
+            font-weight: bold;
         }
 
-       @font-face {
-          font-family: vinted-honey;
-          src: URL("https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/vinted-inter-font/VCHoney-SemiBoldDeck.otf");
+        @font-face {
+            font-family: vinted-honey;
+            src: URL("https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/vinted-inter-font/VCHoney-SemiBoldDeck.otf");
         }
-       
+        
         body {
             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            max-height: 100vh;
+            min-height: 100vh;
             font-family: 'vinted-inter', 'Inter', sans-serif;
             color: var(--vinted-mint);
             padding: 20px; /* Add some padding around the container */
@@ -53,8 +54,8 @@
             border-radius: 20px;
             padding: 40px;
             max-width: 900px;
-            max-height: 198px;
             width: 100%; /* Ensure it takes full width up to max-width */
+            height: 264px; /* Desktop height */
             position: relative;
             overflow: hidden;
             gap: 30px; /* Space between illustration and text */
@@ -62,8 +63,9 @@
         }
 
        .illustration-section {
-            flex-shrink: 0; /* Prevent shrinking on larger screens */
-            width: 30%; /* Fixed width for illustration area */
+            flex: 0 0 30%; /* Sets width to 30% and prevents shrinking/growing */
+            max-width: 30%; /* Limits width to a maximum of 30% of the container */
+            height: 100%; /* Take up the full height of the container */
             position: relative;
             display: flex;
             justify-content: center;
@@ -80,7 +82,7 @@
 
        .text-section {
             flex: 1; /* Allow text to take remaining space */
-            font-size: .75em;
+            font-size: 1em;
             line-height: 1.4;
             text-align: left;
         }
@@ -91,7 +93,7 @@
 
        .text-section h1 {
             font-family: 'vinted-honey', 'inter', sans-serif;
-            font-size: 1.3em;
+            font-size: 1.4em;
             padding: 10px 0; /* Corrected padding syntax */
         }
 
@@ -106,35 +108,29 @@
             /* For tablets */
            .container {
                 flex-direction: column;
-                max-height: 264px;
-                padding: 30px;
+                height: 198px; /* Tablet height */
+                padding: 20px;
                 text-align: center;
-                gap: 20px;
+                gap: 15px; /* Adjusted gap for smaller screens */
             }
 
            .illustration-section {
-                width: 100%; /* Take full width */
-                max-height: 100px; /* Adjusted height for smaller screens */
-                align-items: center; /* Center rack vertically */
+                flex: 0 0 auto; /* Allow auto width in column layout */
+                max-width: 100%;
+                height: 50%; /* Make illustration take half the height in column layout */
+                order: 1; /* Place illustration at the top */
             }
-            
-       .illustration-section img {
-           max-width: 100%;
-           max-height: 100%; /* Ensure the image doesn't exceed the container height */
-           height: auto;
-           display: block;
-           object-fit: contain; /* Maintain aspect ratio */
-       }
 
            .text-section {
-                font-size: .75em;
+                font-size: 0.9em;
                 text-align: center;
+                order: 2; /* Place text at the bottom */
             }
             
            .text-section h1 {
                 font-family: 'vinted-honey', 'inter', sans-serif;
-                font-size: 1.3em;
-                padding: 10px 0;
+                font-size: 1.1em;
+                padding: 5px 0;
             }
 
         }
@@ -142,33 +138,21 @@
         @media (max-width: 480px) {
             /* For mobile */
            .container {
-                padding: 20px;
-                max-height: 150px;
+                height: 150px; /* Mobile height */
+                padding: 15px;
             }
                         
            .illustration-section {
-                width: 100%; /* Take full width */
-                max-height:60px; /* Adjusted height for smaller screens */
-                align-items: center; /* Center rack vertically */
+                height: 50%; /* Keep illustration at half height */
             }
 
-            
-       .illustration-section img {
-           max-width: 100%;
-           max-height: 100%; /* Ensure the image doesn't exceed the container height */
-           height: auto;
-           display: block;
-           object-fit: contain; /* Maintain aspect ratio */
-       }
-
            .text-section {
-                font-size: .5em;
-                text-align: center; /* Corrected text alignment for mobile */
+                font-size: 0.8em;
             }
             
            .text-section h1 {
                 font-family: 'vinted-honey', 'inter', sans-serif;
-                font-size: 1.1em;
+                font-size: 1em;
                 padding: 5px 0;
             }
         }
@@ -178,13 +162,12 @@
     <div class="container">
         <div class="illustration-section">
             <img src="https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/scenarios-parcels.png" alt="shipping illustration">
-           <!-- for screenshot version <img src="https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/screenshot.svg" alt="shipping illustration"> -->
+            <!-- for screenshot version <img src="https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/screenshot.svg" alt="shipping illustration"> -->
         </div>
         <div class="text-section">
             <h1>Your order is temporarily suspended</h1>
             <p>This typically happens when there’s an issue during delivery&mdash;like if the item doesn’t arrive, arrives damaged, or is reported as “significantly not as described” (SNAD).</p>
-            <p>Press<strong> View issue details </strong>on the Order screen for next steps. We’ll hold your payment securely until the issue is resolved.</p>
-
+            <p>Press<strong> View issue details </strong>on the <a href="#">Order screen</a> for next steps. We’ll hold your payment securely until the issue is resolved.</p>
             <!-- for screenshot version: <p>Your order is temporarily suspended&mdash;Press<strong> View issue details </strong>on the Order screen for next steps. We’ll hold your payment securely until the issue is resolved.</p> -->
         </div>
     </div>
