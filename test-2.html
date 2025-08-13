@@ -51,7 +51,7 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            background-color: var(--vinted-smoke);
+            background-color: var(--vinted-lavender-soft);
             border-radius: 20px;
             padding: 40px;
             max-width: 900px;
@@ -93,13 +93,12 @@
         }
 
        .text-section strong {
-            font-weight: bold;
+            font-weight: semibold;
         }
 
        .text-section h1 {
-            font-weight: 600;
+            font-weight: bold;
             font-size: 1.2em;
-            padding: 10px 0; /* Corrected padding syntax */
         }
 
        a:link {
@@ -108,7 +107,7 @@
         }
    
 
-        /* Responsive adjustments - med screens */
+        /* Responsive adjustments - med to small screens */
         @media (max-width: 650px) {
            .container {
                 flex-direction: column;
@@ -121,21 +120,20 @@
 
            .illustration-section {
                 flex: 0 0 33.3333%;
-                height: 100%;
+                height: 75%;
                 align-items: center;
             }
 
            .text-section {
                 flex: 1;
-                font-size: 0.8em;
+                font-size: 1em;
                 text-align: left;
                 justify-content: center;
             }
             
            .text-section h1 {
-                font-weight: 600;
-                font-size: 1em;
-                padding: 10px 0;
+                font-weight: bold;
+                font-size: 1.2em;
             }
 
         }
@@ -172,8 +170,8 @@
             <img src="https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/screenshot-1.svg" alt="screenshot of order details screen with 'View order details' button circled.">
         </div>
         <div class="text-section">
-            <h1>What can I do if my order is suspended?</h1>
-            <p>If your order is suspended, go to the <strong>Order screen</strong> and press <strong>View issue details</strong> for more on what went wrong and next steps. We'll hold your payment securely until the issue is resolved.</p>
+            <h1>What can I do if my order is suspended?</h1></br>
+            <p>If your order has been suspended, go to the Order screen and press <strong>View issue details</strong> for more information on what went wrong and next steps. We'll hold your payment securely until the issue is resolved.</p>
 
             <!-- for screenshot version: <p>Your order is temporarily suspended&mdash;Press<strong> View issue details </strong>on the Order screen for next steps. We’ll hold your payment securely until the issue is resolved.</p> -->
         </div>
