@@ -17,7 +17,6 @@
             --vinted-lemon-soft: #ffeebd; 
         }
         
-        /* Using a standard font to avoid external file issues */
         @font-face {
             font-family: vinted-inter;
             src: URL("https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/vinted-inter-font/V-Inter-Regular-375.woff");
@@ -105,7 +104,6 @@
 
         /* Responsive adjustments */
         @media (max-width: 650px) {
-            /* For tablets */
            .container {
                 flex-direction: column;
                 height: 198px; /* Tablet height */
@@ -117,7 +115,7 @@
            .illustration-section {
                 flex: 0 0 auto; /* Allow auto width in column layout */
                 max-width: 100%;
-                height: 50%; /* Make illustration take half the height in column layout */
+                height: 30%; 
                 order: 1; /* Place illustration at the top */
             }
 
@@ -136,14 +134,13 @@
         }
 
         @media (max-width: 480px) {
-            /* For mobile */
            .container {
                 height: 150px; /* Mobile height */
-                padding: 15px;
+                padding: 20px;
             }
                         
            .illustration-section {
-                height: 50%; /* Keep illustration at half height */
+                height: 30%; /* Keep illustration at half height */
             }
 
            .text-section {
@@ -162,13 +159,13 @@
     <div class="container">
         <div class="illustration-section">
             <img src="https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/scenarios-parcels.png" alt="shipping illustration">
-            <!-- for screenshot version <img src="https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/screenshot.svg" alt="shipping illustration"> -->
+            <!-- for screenshot version <img src="https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/screenshot.svg" alt="Screenshot of Order details screen with "View issue details" button circled."> -->
         </div>
         <div class="text-section">
-            <h1>Your order is temporarily suspended</h1>
-            <p>This typically happens when there’s an issue during delivery&mdash;like if the item doesn’t arrive, arrives damaged, or is reported as “significantly not as described” (SNAD).</p>
+            <!-- <h1>Your order is temporarily suspended</h1> -->
+            <p>We've temporarily suspended your order. This typically happens because of an issue with the item or a problem during delivery.</p>
+            <!-- <p>This typically happens when there’s an issue during delivery&mdash;like if the item doesn’t arrive, arrives damaged, or is reported as “significantly not as described” (SNAD).</p> -->
             <p>Press<strong> View issue details </strong>on the <a href="#">Order screen</a> for next steps. We’ll hold your payment securely until the issue is resolved.</p>
-            <!-- for screenshot version: <p>Your order is temporarily suspended&mdash;Press<strong> View issue details </strong>on the Order screen for next steps. We’ll hold your payment securely until the issue is resolved.</p> -->
         </div>
     </div>
 </body>
