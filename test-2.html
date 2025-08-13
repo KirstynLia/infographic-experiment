@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infographic test</title>
+    <title>Infographic test 2</title>
    <style>
         :root {
             --vinted-calypso: #004654; /* Text color */
@@ -14,9 +14,11 @@
             --vinted-peach: #ffa580;
             --vinted-peach-soft: #ffd2bf; 
             --vinted-lemon: #ffe13b; 
-            --vinted-lemon-soft: #ffeebd; 
+            --vinted-lemon-soft: #ffeebd;
+            --vinted-smoke: #edf2f2;
         }
-        
+
+       /* import Vinted fonts */
         @font-face {
           font-family: vinted-inter;
           src: URL("https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/vinted-inter-font/V-Inter-Regular-375.woff");
@@ -40,7 +42,7 @@
             align-items: center;
             min-height: 100vh;
             font-family: 'vinted-inter', 'Inter', sans-serif;
-            color: var(--vinted-mint);
+            color: var(--vinted-calypso);
             padding: 20px; /* Add some padding around the container */
             box-sizing: border-box; /* Include padding in element's total width and height */
         }
@@ -49,7 +51,7 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            background-color: var(--vinted-calypso);
+            background-color: var(--vinted-smoke);
             border-radius: 20px;
             padding: 40px;
             max-width: 900px;
@@ -61,14 +63,14 @@
         }
 
        .illustration-section {
-            flex-shrink: 0; /* Prevent shrinking on larger screens */
-            width: 300px; /* Fixed width for illustration area */
-            height: 300px;
+            flex: 0 0 33.3333%; /* 1/3 width on desktop */
+            height: 100%;
             position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
         }
+
 
        .illustration-section img {
            max-width: 100%;
@@ -83,6 +85,7 @@
             font-size: 1em;
             line-height: 1.4;
             text-align: left;
+            justify-content: center;
         }
 
        .text-section strong {
@@ -90,20 +93,19 @@
         }
 
        .text-section h1 {
-            font-family: 'vinted-honey', 'inter', sans-serif;
-            font-size: 1.4em;
+            font-weight: 600;
+            font-size: 1.2em;
             padding: 10px 0; /* Corrected padding syntax */
         }
 
        a:link {
             text-decoration: underline;
-            color: var(--vinted-mint);
+            color: var(--vinted-calypso);
         }
    
 
-        /* Responsive adjustments */
+        /* Responsive adjustments - med screens */
         @media (max-width: 650px) {
-            /* For tablets */
            .container {
                 flex-direction: column;
                 padding: 30px;
@@ -113,43 +115,45 @@
 
            .illustration-section {
                 width: 100%; /* Take full width */
-                height: 150px; /* Adjusted height for smaller screens */
+                height: 160px; /* Adjusted height for smaller screens */
                 align-items: center; /* Center rack vertically */
             }
 
            .text-section {
-                font-size: 1em;
-                text-align: center;
+                font-size: 0.8em;
+                text-align: left;
+                justify-content: center;
             }
             
            .text-section h1 {
-                font-family: 'vinted-honey', 'inter', sans-serif;
-                font-size: 1.1em;
+                font-weight: 600;
+                font-size: 1em;
                 padding: 10px 0;
             }
 
         }
-
+       
+        /* Responsive adjustments - small screens */
         @media (max-width: 480px) {
-            /* For mobile */
            .container {
                 padding: 20px;
             }
                         
            .illustration-section {
                 width: 100%; /* Take full width */
-                height: 150px; /* Adjusted height for smaller screens */
+                height: 160px; /* Adjusted height for smaller screens */
                 align-items: center; /* Center rack vertically */
             }
 
            .text-section {
-                font-size: 1em;
-                text-align: center; /* Corrected text alignment for mobile */
+                font-size: 0.6em;
+                text-align: left;
+                justify-content: center;
             }
             
            .text-section h1 {
-                font-family: 'vinted-honey', 'inter', sans-serif;
-                font-size: 1.1em;
+                font-weight: 600;
+                font-size: 0.8em;
                 padding: 10px 0;
             }
         }
@@ -158,7 +162,7 @@
 <body>
     <div class="container">
         <div class="illustration-section">
-            <img src="https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/screenshot-1.svg" alt="screenshot of order details screen with 'View order details' button highlighted">
+            <img src="https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/screenshot-1.svg" alt="screenshot of order details screen with 'View order details' button circled.">
         </div>
         <div class="text-section">
             <h1>Your order is temporarily suspended</h1>
