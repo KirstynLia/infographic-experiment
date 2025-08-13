@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infographic test 3</title>
+    <title>Infographic test</title>
    <style>
         :root {
             --vinted-calypso: #004654; /* Text color */
@@ -14,9 +14,11 @@
             --vinted-peach: #ffa580;
             --vinted-peach-soft: #ffd2bf; 
             --vinted-lemon: #ffe13b; 
-            --vinted-lemon-soft: #ffeebd; 
+            --vinted-lemon-soft: #ffeebd;
+            --vinted-smoke: #edf2f2; 
         }
         
+        /* import Vinted fonts*/
         @font-face {
             font-family: vinted-inter;
             src: URL("https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/vinted-inter-font/V-Inter-Regular-375.woff");
@@ -32,6 +34,8 @@
             font-family: vinted-honey;
             src: URL("https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/vinted-inter-font/VCHoney-SemiBoldDeck.otf");
         }
+
+       /* container style*/
         
         body {
             margin: 0;
@@ -40,7 +44,7 @@
             align-items: center;
             min-height: 100vh;
             font-family: 'vinted-inter', 'Inter', sans-serif;
-            color: var(--vinted-mint);
+            color: var(--vinted-calypso);
             padding: 20px;
             box-sizing: border-box;
         }
@@ -49,7 +53,7 @@
             display: flex;
             flex-direction: row;
             align-items: stretch;
-            background-color: var(--vinted-calypso);
+            background-color: var(--vinted-lavender);
             border-radius: 20px;
             padding: 40px;
             max-width: 900px;
@@ -79,13 +83,19 @@
            font-size: 1em;
        }
 
+       .text-section h1 {
+            font-family: 'vinted-honey', 'inter', sans-serif;
+            font-size: 1.3em;
+            padding-bottom: 10px
+        }
+
        .text-section strong {
             font-weight: bold;
         }
 
        a:link {
             text-decoration: underline;
-            color: var(--vinted-mint);
+            color: var(--vinted-calypso);
         }
    
        .illustration-section {
@@ -105,11 +115,11 @@
            object-fit: contain;
        }
         
-        /* Responsive adjustments */
+        /* Responsive adjustments - med screens */
         @media (max-width: 650px) {
            .container {
                 flex-direction: column;
-                max-height: 300px;
+                max-height: none; 
                 padding: 20px;
                 text-align: center;
                 align-items: center;
@@ -123,29 +133,41 @@
                 font-size: 0.8em; /* Adjusted font size to fit */
             }
 
+             .text-section h1 {
+            font-family: 'vinted-honey', 'inter', sans-serif;
+            font-size: 1em;
+            padding-bottom: 10px
+        }
+
            .text-section p {
                padding: 0;
            }
 
            .illustration-section {
                 flex: 0 0 auto;
-                max-height: 50%;
+                max-height: 150px; /* Set a maximum height for the image section */
                 order: -1;
             }
         }
-
+       
+        /* Responsive adjustments - small screens */
         @media (max-width: 480px) {
             .text-section {
                 font-size: 0.7em; /* Adjusted font size to fit */
             }
+            
+             .text-section h1 {
+            font-family: 'vinted-honey', 'inter', sans-serif;
+            font-size: 0.9em;
+            padding-bottom: 10px
+        }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container" alt="Callout container with information about what to do if your order has been suspended">
         <div class="text-section">
-          <p>When a problem is reported during delivery or with a delivered item, we may temporarily suspend the order to investigate.</p> 
-          <p>If your order has been suspended, press<strong> View issue details </strong>on the Order screen for information and next steps. Your payment will be held securely until the issue is resolved.</p>
+            <p>If your order has been suspended, go to the <a href:"#">Order screen</a> and press <strong>View issue details</strong> for next steps. We’ll hold your payment securely until the issue is resolved.</p>
         </div>
         <div class="illustration-section">
             <img src="https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/scenarios-parcels.png" alt="shipping illustration">
