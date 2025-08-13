@@ -14,11 +14,10 @@
             --vinted-peach: #ffa580;
             --vinted-peach-soft: #ffd2bf; 
             --vinted-lemon: #ffe13b; 
-            --vinted-lemon-soft: #ffeebd;
-            --vinted-smoke: #edf2f2; 
+            --vinted-lemon-soft: #ffeebd; 
         }
         
-        /* import Vinted fonts*/
+        /* Import Vinted fonts*/
         @font-face {
             font-family: vinted-inter;
             src: URL("https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/vinted-inter-font/V-Inter-Regular-375.woff");
@@ -34,8 +33,6 @@
             font-family: vinted-honey;
             src: URL("https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/vinted-inter-font/VCHoney-SemiBoldDeck.otf");
         }
-
-       /* container style*/
         
         body {
             margin: 0;
@@ -83,12 +80,6 @@
            font-size: 1em;
        }
 
-       .text-section h1 {
-            font-family: 'vinted-honey', 'inter', sans-serif;
-            font-size: 1.3em;
-            padding-bottom: 10px
-        }
-
        .text-section strong {
             font-weight: bold;
         }
@@ -115,11 +106,11 @@
            object-fit: contain;
        }
         
-        /* Responsive adjustments - med screens */
+        /* Responsive adjustments - medium screens */
         @media (max-width: 650px) {
            .container {
                 flex-direction: column;
-                max-height: none; 
+                max-height: none; /* Allow container to grow */
                 padding: 20px;
                 text-align: center;
                 align-items: center;
@@ -133,12 +124,6 @@
                 font-size: 0.8em; /* Adjusted font size to fit */
             }
 
-             .text-section h1 {
-            font-family: 'vinted-honey', 'inter', sans-serif;
-            font-size: 1em;
-            padding-bottom: 10px
-        }
-
            .text-section p {
                padding: 0;
            }
@@ -149,34 +134,29 @@
                 order: -1;
             }
         }
-       
         /* Responsive adjustments - small screens */
         @media (max-width: 480px) {
-            .text-section {
-                font-size: 0.7em; /* Adjusted font size to fit */
+            .container {
+                padding: 15px; /* Reduced padding for very small screens */
             }
-            
-             .text-section h1 {
-            font-family: 'vinted-honey', 'inter', sans-serif;
-            font-size: 0.9em;
-            padding-bottom: 10px
-        }
 
             .illustration-section {
-                flex: 0 0 auto;
-                max-height: 100px; /* Set a maximum height for the image section */
-                order: -1;
+                max-height: 100px; /* Adjusted image height for mobile */
+            }
+
+            .text-section {
+                font-size: 0.7em; /* Adjusted font size to fit */
             }
         }
     </style>
 </head>
 <body>
-    <div class="container" alt="Callout container with information about what to do if your order has been suspended">
+    <div class="container">
         <div class="text-section">
-            <p>If your order has been suspended, go to the <a href:"#">Order screen</a> and press <strong>View issue details</strong> for next steps. We’ll hold your payment securely until the issue is resolved.</p>
+            <p>If your order has been suspended, go to the Order screen and press<strong>View order details</strong>for next steps. We’ll hold your payment securely until the issue is resolved.</p>
         </div>
         <div class="illustration-section">
-            <img src="https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/order-suspended-screen.svg" alt="shipping illustration">
+            <img src="https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/screenshot.svg" alt="screenshot of order details screen">
         </div>
     </div>
 </body>
