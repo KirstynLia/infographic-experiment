@@ -55,9 +55,10 @@
             padding: 40px;
             max-width: 900px;
             width: 100%;
+            height: auto; /* Changed height to auto for flexibility */
             max-height: 300px;
             position: relative;
-            overflow: hidden; /* Changed to hidden to prevent scrolling */
+            overflow: hidden; 
             gap: 30px;
             margin: auto;
         }
@@ -82,6 +83,11 @@
 
        .text-section strong {
             font-weight: bold;
+        }
+
+        .text-section h1 {
+            font-family: 'vinted-honey', 'inter', sans-serif;
+            font-size: 1.2em;
         }
 
        a:link {
@@ -115,6 +121,7 @@
                 text-align: center;
                 align-items: center;
                 gap: 15px;
+                height: auto; /* Added for flexibility */
             }
 
            .text-section {
@@ -123,6 +130,11 @@
                 align-items: center;
                 font-size: 0.8em; /* Adjusted font size to fit */
             }
+
+            .text-section h1 {
+            font-family: 'vinted-honey', 'inter', sans-serif;
+            font-size: 1em;
+        }
 
            .text-section p {
                padding: 0;
@@ -137,7 +149,8 @@
         /* Responsive adjustments - small screens */
         @media (max-width: 480px) {
             .container {
-                padding: 20px; /* Reduced padding for very small screens */
+                padding: 15px; /* Reduced padding for very small screens */
+                height: auto;
             }
 
             .illustration-section {
@@ -147,16 +160,22 @@
             .text-section {
                 font-size: 0.7em; /* Adjusted font size to fit */
             }
+
+            .text-section h1 {
+            font-family: 'vinted-honey', 'inter', sans-serif;
+            font-size: 0.8em;
+        }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="text-section">
-            <p>If your order has been suspended, go to the <a href="#">Order screen</a> and press <strong>View order details</strong>for next steps. We’ll hold your payment securely until the issue is resolved.</p>
+            <h1> Order suspended? Here's what to do next</h1>
+            <p>Go to the <a href="#">Order screen</a> and press <strong>View order details</strong> for more on what went wrong and next steps for your situation. Your payment will be held securely until the issue is resolved.</p>
         </div>
         <div class="illustration-section">
-            <img src="https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/screenshot-1.svg" alt="screenshot of order details screen">
+            <img src="https://raw.githubusercontent.com/KirstynLia/infographic-experiment/main/screenshot-1.svg" alt="screenshot of order details screen with 'View order details' button highlighted">
         </div>
     </div>
 </body>
